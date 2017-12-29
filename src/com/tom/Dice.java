@@ -1,3 +1,4 @@
+package com.tom;
 import java.util.*;
 public class Dice {
 
