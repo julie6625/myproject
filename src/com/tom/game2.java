@@ -6,21 +6,21 @@ public class game2 {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		while(true){
-			System.out.print("請輸入方向:");
+			System.out.print("enter the direction you want to move:");
 			int code = scanner.nextInt();
 			
 			switch (code){
 				case 8:
-					System.out.println("向上");
+					System.out.println("up");
 					break;
 				case 6:
-					System.out.println("向右");
+					System.out.println("right");
 					break;
 				case 4:
-					System.out.println("向左");
+					System.out.println("left");
 					break;
 				case 2:
-					System.out.println("向下");
+					System.out.println("down");
 					break;
 //				default:
 //					System.out.println("wrong number");
