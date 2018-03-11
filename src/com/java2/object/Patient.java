@@ -18,20 +18,6 @@ public class Patient {
 //	}
 	
 	
-	public static void main(String[] args) {
-		Patient Ian = new Patient("Ian",88);
-		Patient Ann = new Patient("Ann",56);
-		Patient Dan = new Patient("Dan",30);
-		Scanner sc1 = new Scanner(System.in);
-		String a = sc1.nextLine();
-		if (a=="Ian"){
-			System.out.println(carelevel);
-		}else if (a=="Ann"){
-			System.out.println(carelevel);
-		}else if (a=="Dan"){
-			System.out.println(carelevel);
-		}
 	
-	}
 
 }
