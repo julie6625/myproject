@@ -7,16 +7,26 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.nio.channels.ShutdownChannelGroupException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.tom.Sogo.Customer;
-import com.tom.Sogo.GoldenCustomer;
-import com.tom.Sogo.SilverCustomer;
+import com.java2.object.Sogo.Customer;
 
 public class Sogo {
+	public class Customer {
+
+		public Customer(int amount) {
+			// TODO Auto-generated constructor stub
+		}
+
+		public void print() {
+			// TODO Auto-generated method stub
+			
+		}
+
+	}
+
 	Scanner scanner = new Scanner(System.in);
 
 	public Sogo() {
@@ -47,7 +57,7 @@ public class Sogo {
 							Sales sales = new Sales(type, amount);
 							list.add(sales);
 						} catch (NumberFormatException e) {
-							System.out.println("¸ê®Æ®æ¦¡¿ù»~");
+							System.out.println("ï¿½ï¿½Æ®æ¦¡ï¿½ï¿½ï¿½~");
 							return;
 						}
 						line = in.readLine();
@@ -61,7 +71,7 @@ public class Sogo {
 				}
 				// report
 				for (Sales sales: list){
-					Customer customer = null;
+					Object customer = null;
 					switch(sales.type){
 					case 1: 
 						customer = new Customer(sales.getAmount());
@@ -73,7 +83,7 @@ public class Sogo {
 						customer = new GoldenCustomer(sales.getAmount());
 						break;
 					}
-					customer.print();
+					((Customer) customer).print();
 				}
 				
 				
@@ -88,9 +98,9 @@ public class Sogo {
 		try {
 			FileOutputStream fos = new FileOutputStream("sales.txt", true);
 			PrintStream out = new PrintStream(fos);
-			System.out.print("½Ð¿é¤J·|­ûµ¥¯Å:");
+			System.out.print("ï¿½Ð¿ï¿½Jï¿½|ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:");
 			int type = scanner.nextInt();
-			System.out.print("½Ð¿é¤J¾P°âª÷ÃB:");
+			System.out.print("ï¿½Ð¿ï¿½Jï¿½Pï¿½ï¿½ï¿½ï¿½B:");
 			int amount = scanner.nextInt();
 			out.println(type + "\t" + amount);
 			out.flush();
@@ -103,10 +113,10 @@ public class Sogo {
 	}
 
 	public void showFunctions() {
-		System.out.println("½Ð¿é¤J¥\¯à(1~3):");
-		System.out.println("1) ¿é¤J¾P°â°O¿ý");
-		System.out.println("2) ¦L¥X¾P°â³øªí");
-		System.out.println("3) µ²§ôµ{¦¡");
+		System.out.println();
+		System.out.println("1) ï¿½ï¿½Jï¿½Pï¿½ï¿½Oï¿½ï¿½");
+		System.out.println("2) ï¿½Lï¿½Xï¿½Pï¿½ï¿½ï¿½ï¿½ï¿½");
+		System.out.println("3) ï¿½ï¿½ï¿½ï¿½ï¿½{ï¿½ï¿½");
 	}
 
 	public static void main(String[] args) {
