@@ -1,4 +1,4 @@
-package com.java2.net;
+package com.java2.object;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,7 +8,7 @@ import java.net.UnknownHostException;
 import javax.swing.JFrame;
 
 public class Tester2 extends JFrame {
-	public Tester() {
+	public Tester2() {
 		setSize(200, 300);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setVisible(true);

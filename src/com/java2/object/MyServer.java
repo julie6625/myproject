@@ -1,5 +1,5 @@
 
-package com.java2.net;
+package com.java2.object;
 
 import java.io.BufferedReader;
 import java.io.IOException;
