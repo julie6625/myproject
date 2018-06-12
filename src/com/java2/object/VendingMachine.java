@@ -32,7 +32,13 @@ public class VendingMachine {
 		
 		while(c1){
 			switch(coinin){
-			
+			case 0:
+				c1=false;
+				c2=true;
+				break;
+			case 5:
+				coin = coin + 50;
+				break;
 			}
 			
 		}
