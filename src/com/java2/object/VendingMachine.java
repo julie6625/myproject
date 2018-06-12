@@ -28,17 +28,31 @@ public class VendingMachine {
 			System.out.println(drink.getId() + "\t" + drink.getName() + "\t" + drink.getPrice());
 
 		}
-		System.out.println("投幣，或輸入0以結束");
+		System.out.println("insert the coin,or enter 0 to quit");
 		
 		while(c1){
 			switch(coinin){
 			case 0:
+				System.out.println("quit...");
 				c1=false;
 				c2=true;
 				break;
 			case 5:
 				coin = coin + 50;
+				System.out.println("coin:"+coin);
 				break;
+			case 10:
+				coin = coin + 10;
+				System.out.println("coin:"+coin);
+				break;
+			case 50:
+				coin = coin + 50;
+				System.out.println("coin:"+coin);
+				break;
+			default:
+				System.out.println("wrong data,try again.");
+				break;
+				
 			}
 			
 		}
