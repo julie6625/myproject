@@ -9,20 +9,41 @@ public class Map {
 	class map {
 		int row,col,traps;
 		int[] trappos;
-		Player player;
+		Player player = new Player(100,0);
 		
 	}
-	class Player{
+	public class Player{
+		public Player(int health, int pos) {
+			super();
+			this.health = health;
+			this.pos = pos;
+		}
 		int health = 100;
 		int pos = 0;
 		
+		public int gethealth() {
+			return health;
+			
+		}
+		
+
+		public void sethealth(int health) {
+			this.health = health;
+		}
+
+		public int getpos() {
+			return pos;
+		}
+
+		public void setpos(int pos) {
+			this.pos = pos;
+	}
+		
 	}
 	public void putTrap() {
-		// TODO Auto-generated method stub
 		
 	}
 	public void start() {
-		// TODO Auto-generated method stub
 		
 	}
 }
