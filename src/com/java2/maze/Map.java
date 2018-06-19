@@ -3,7 +3,7 @@ package com.java2.maze;
 import java.util.*;
 
 public class Map {
-
+//traps setup,gaming hasn't done yet
 
 	int row,col,traps;
 	Player player = new Player(100,0);
