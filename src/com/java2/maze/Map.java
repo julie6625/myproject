@@ -3,15 +3,19 @@ package com.java2.maze;
 import java.util.*;
 
 public class Map {
-	public Map(int row, int col, int trapCount) {
-		
+
+
+	int row,col,traps;
+	int[] trappos;
+	Player player = new Player(100,0);
+	
+	public Map(int row, int col, int[] trappos) {
+		super();
+		this.row = row;
+		this.col = col;
+		this.trappos = trappos;
 	}
-	class map {
-		int row,col,traps;
-		int[] trappos;
-		Player player = new Player(100,0);
-		
-	}
+
 	public class Player{
 		public Player(int health, int pos) {
 			super();
