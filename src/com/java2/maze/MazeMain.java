@@ -16,10 +16,8 @@ public class MazeMain {
 			int col = Integer.parseInt(token[0]);
 			int row = Integer.parseInt(token[1]);
 			line = in.readLine();
-			int trapCount = Integer.parseInt(line);
-			Map mz = new Map(row,col, trapCount);
-			mz.putTrap();
-			mz.start();
+			int traps = Integer.parseInt(line);
+			Map mz = new Map(row,col,traps);
 		} catch (FileNotFoundException e) {
 			// TODO: handle exception
 			e.printStackTrace();

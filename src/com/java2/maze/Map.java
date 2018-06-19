@@ -6,14 +6,21 @@ public class Map {
 
 
 	int row,col,traps;
-	int[] trappos;
 	Player player = new Player(100,0);
+	int health = player.gethealth();
+	int pos = player.getpos();
 	
-	public Map(int row, int col, int[] trappos) {
+	
+	boolean gaming = true;
+	Random r1 = new Random();
+	
+			
+	
+	public Map(int row, int col, int traps) {
 		super();
 		this.row = row;
 		this.col = col;
-		this.trappos = trappos;
+		this.traps = traps;
 	}
 
 	public class Player{
@@ -48,6 +55,9 @@ public class Map {
 		
 	}
 	public void start() {
+		while(gaming) {
+			
+		}
 		
 	}
 }
