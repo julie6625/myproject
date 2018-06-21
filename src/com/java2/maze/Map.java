@@ -9,14 +9,14 @@ public class Map {
 	Player player = new Player(100,0);
 	int health = player.gethealth();
 	int pos = player.getpos();
-	
-	
+
+
 	boolean gaming = true;
 	Random r1 = new Random();
 	HashSet<Integer> trap = new HashSet<>();
 	List<Integer> token = new ArrayList<>();
-			
-	
+
+
 	public Map(int row, int col, int traps) {
 		super();
 		this.row = row;
@@ -32,12 +32,12 @@ public class Map {
 		}
 		int health = 100;
 		int pos = 0;
-		
+
 		public int gethealth() {
 			return health;
-			
+
 		}
-		
+
 
 		public void sethealth(int health) {
 			this.health = health;
@@ -50,7 +50,7 @@ public class Map {
 		public void setpos(int pos) {
 			this.pos = pos;
 	}
-		
+
 	}
 	public void putTrap() {
 		for (int i = 0; i < traps; i++) {
@@ -115,12 +115,13 @@ public class Map {
 			if (pos == token.get(0) || pos == token.get(1) || pos == token.get(2)
 					|| pos == token.get(3) || pos == token.get(4)) {
 				health = health - 5;
+				System.out.println("ouch! the traps!");
 			}
 			if (i == 0 || health <= 0) {
 				System.out.println("GG");
 				gaming = false;
 }
 		}
-		
+
 	}
 }
