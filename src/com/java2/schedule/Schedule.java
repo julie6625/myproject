@@ -7,7 +7,7 @@ public class Schedule {
 	
 	public void on() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("請輸入星期(1~7)：");
+		System.out.println("enter the day(1~7):");
 		int input = scanner.nextInt();
 		int tmp = 0;
 		int time = 0;
@@ -28,13 +28,21 @@ public class Schedule {
 			}
 		}
 		
+
+		System.out.println("enter the time (0~24):");
+		
+		input = scanner.nextInt();
+		if(input>=time && input<=(time+dur)) {
+			isavaliable = false;
+		}
+		
 		
 		
 		
 		if(isavaliable) {
-			System.out.println("【有空檔】");
+			System.out.println("is avalible");
 		}else {
-			System.out.println("【有課：   "+room+" "+course+" 到"+(time+dur)+"時】");
+			System.out.println("there's a class in "+room+" of "+course+" to "+(time+dur));
 		}
 	}
 }
