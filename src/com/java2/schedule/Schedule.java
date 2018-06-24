@@ -15,5 +15,14 @@ public class Schedule {
 		String tcourse = null;
 		String troom = null;
 		boolean isavaliable = true;
+		
+		
+		
+		
+		if(isavaliable) {
+			System.out.println("【有空檔】");
+		}else {
+			System.out.println("【有課：   "+troom+" "+tcourse+" 到"+(ttime+tdur)+"時】");
+		}
 	}
 }
